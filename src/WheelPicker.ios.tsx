@@ -9,7 +9,7 @@ interface Props {
   disabled?: boolean;
 }
 
-const WheelPicker: React.FC<Props> = props => {
+const WheelPicker = (props: Props) => {
   const [selectedItem, setSelectedItem] = useState(props.selectedItem || 0);
   const { data, onItemSelected, disabled } = props;
   if (!data || data.length === 0) return null;
@@ -18,7 +18,7 @@ const WheelPicker: React.FC<Props> = props => {
       <Picker
         {...props}
         selectedValue={data[selectedItem]}
-        onValueChange={(value, index): void => {
+        onValueChange={(_: any, index: number): void => {
           if (onItemSelected) onItemSelected(index);
           setSelectedItem(index);
         }}

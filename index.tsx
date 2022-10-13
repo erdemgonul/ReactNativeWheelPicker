@@ -1,5 +1,4 @@
-import WheelPicker from './src/WheelPicker'
-import TimePicker from './src/TimePicker'
-import DatePicker from './src/DatePicker'
+//@ts-ignore
+import WheelPicker from "./src/WheelPicker";
 
-export { WheelPicker, TimePicker, DatePicker }
+export { WheelPicker };
